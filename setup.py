@@ -14,5 +14,6 @@ setup(name='Magic Mirror',
           'h5py<3.0.0',
           "RPi.GPIO==0.7.1; os_name=='linux'",
           "opencv-python-headless; os_name=='posix'"
-      ]
+      ],
+      scripts=['magicmirror']
    )

@@ -31,8 +31,7 @@ def control_mirror():
 
 def main():
     print("Starting camera")
-    camera = cv2.VideoCapture(1)
-
+    camera = cv2.VideoCapture(0)
     print("Starting to detect")
     # keep looping
     while True:
