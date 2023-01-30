@@ -11,9 +11,9 @@ setup(name='Magic Mirror',
           'opencv-python==4.7.0.68',
           'numpy==1.21.6',
           'imutils==0.5.4',
-          'h5py<3.0.0',
-          "RPi.GPIO==0.7.1; os_name=='linux'",
-          "opencv-python-headless; os_name=='posix'"
+          "h5py<3.0.0 ; platform_system == 'Darwin'",
+          "RPi.GPIO==0.7.1; platform_system=='Linux'",
+          "opencv-python-headless; platform_system == 'Darwin'"
       ],
       scripts=['magicmirror']
    )
