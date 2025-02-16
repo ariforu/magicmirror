@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
-
-setup(name='Magic Mirror',
+package='magicmirror'
+setup(name=package,
       version='1.0',
       description='Magic Mirror that turns on when you smile',
       author='Arijit Banerjee',
@@ -15,5 +15,9 @@ setup(name='Magic Mirror',
           "RPi.GPIO==0.7.1; platform_system=='Linux'",
           "opencv-python-headless; platform_system == 'Darwin'"
       ],
-      scripts=['magicmirror']
+      entry_points = {
+          'console_scripts': [
+              'magicmirror=magicmirror.detect_smile:main',
+          ],
+      }
    )
